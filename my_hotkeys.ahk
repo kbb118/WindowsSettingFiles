@@ -1,28 +1,20 @@
 ;http://ahkwiki.net/KeyList#Key_Kana
 ;無変換hjklで方向キー
-~vk1D & h::Send, {Left}
-vk1D & j::Send, {Down}
-vk1D & k::Send, {Up}
-vk1D & l::Send, {Right}
-;変換でIME
-;vk1C::Send, {vkF3}
-;無変換wasdでwindow resize
-vk1D & a::Send, #{Left}
-vk1D & s::Send, #{Down}
-vk1D & w::Send, #{Up}
-vk1D & d::Send, #{Right}
+~vk1Dsc07B & h::Send, {Blind}{Left}
+vk1Dsc07B & j::Send, {Blind}{Down}
+vk1Dsc07B & k::Send, {Blind}{Up}
+vk1Dsc07B & l::Send, {Blind}{Right}
+;無変換wasdでウィンドウリサイズ
+vk1Dsc07B & a::Send, {Blind}#{Left}
+vk1Dsc07B & s::Send, {Blind}#{Down}
+vk1Dsc07B & w::Send, {Blind}#{Up}
+vk1Dsc07B & d::Send, {Blind}#{Right}
 ;無変換n,mでbackspace,delete
-vk1D & n::Send, {Blind}{BS}
-vk1D & m::Send, {Blind}{Del}
+vk1Dsc07B & n::Send, {Blind}{BS}
+vk1Dsc07B & m::Send, {Blind}{Del}
 ;無変換 変換でenter
-vk1D & vk1C::Send, {Blind}{Enter}
+vk1Dsc07B & vk1Csc079::Send, {Blind}{Enter}
 ;無変換d,fでhome,end
-vk1D & e::Send, {Blind}{Home}
-vk1D & i::Send, {Blind}{End}
-;無変換c,v,x,z,yで
-vk1D & c::Send, {Blind}^c
-vk1D & v::Send, {Blind}^v
-vk1D & x::Send, {Blind}^x
-vk1D & z::Send, {Blind}^z
-vk1D & y::Send, {Blind}^y
+vk1Dsc07B & e::Send, {Blind}{Home}
+vk1Dsc07B & i::Send, {Blind}{End}
 Return
