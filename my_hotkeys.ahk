@@ -19,9 +19,9 @@ vk1Dsc07B & e::Send, {Blind}{Home}
 vk1Dsc07B & i::Send, {Blind}{End}
 
 ;
-; Shift & Space
+; 変換 & Space
 ;
-*Space::
+*vk1Csc079::
   SendInput {RShift Down}
   If SandS_SpaceDown = 1
   {
@@ -36,15 +36,15 @@ vk1Dsc07B & i::Send, {Blind}{End}
   Return
 
 
-*Space Up:: 
+*vk1Csc079 Up:: 
   SendInput {RShift Up}
   SandS_SpaceDown := 0
   If SandS_AnyKeyPressed = 0
   {
-    If A_TickCount - SandS_SpaceDownTime < 200.005
-    {
-      SendInput {Space}
-    }
+    ;If A_TickCount - SandS_SpaceDownTime < 200
+    ;{
+      SendInput {vk1Csc079}
+    ;}
     ; Send EndKey of the "Input" command above
     ; You must use Send here since SendInput is ignored by "Input"
     Send {RShift}
